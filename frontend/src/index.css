@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #FAF8F5;
+  color: #1C1C1E;
+  margin: 0;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #F0EDE8; }
+::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 3px; }
+.product-card { transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+.gradient-text { background: linear-gradient(135deg, #C9A84C 0%, #E8D5A3 50%, #C9A84C 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.btn-shimmer { position: relative; overflow: hidden; }
+.btn-shimmer::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+.btn-shimmer:hover::after { left: 100%; }
+.modal-overlay { backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.input-elegant { border-bottom: 2px solid #E8D5A3; transition: border-color 0.3s ease; background: transparent; }
+.input-elegant:focus { border-color: #C9A84C; outline: none; }
+.nav-link { position: relative; }
+.nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #C9A84C; transition: width 0.3s ease; }
+.nav-link:hover::after { width: 100%; }
+.category-pill { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.category-pill:hover, .category-pill.active { background: #1C1C1E; color: #C9A84C; transform: scale(1.05); }
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.55s cubic-bezier(0.22, 0.61, 0.36, 1.05) forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.45s ease forwards;
+}
+
+.cart-sidebar { transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }

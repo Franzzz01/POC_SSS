@@ -1,0 +1,101 @@
+export const products = [
+  // Phones
+  { id: 1, name: "Samsung Galaxy S25 Ultra", category: "phones", price: 1199, rating: 4.8, reviews: 2341,
+    description: "The pinnacle of Android excellence. A titanium frame meets a 200MP camera system that captures the world in extraordinary detail.", 
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&q=80",
+    badge: "Bestseller" },
+  { id: 2, name: "iPhone 16 Pro Max", category: "phones", price: 1299, rating: 4.9, reviews: 4120,
+    description: "Apple Intelligence meets titanium design. The A18 Pro chip delivers desktop-class performance in your pocket.",
+    image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&q=80",
+    badge: "New" },
+  { id: 3, name: "Google Pixel 9 Pro", category: "phones", price: 999, rating: 4.7, reviews: 1876,
+    description: "The smartest camera phone ever made. Google's AI photography engine turns every moment into a masterpiece.",
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80" },
+  { id: 4, name: "OnePlus 13", category: "phones", price: 799, rating: 4.6, reviews: 987,
+    description: "Blazing fast charging meets flagship performance. 100W SuperVOOC fills your battery in 25 minutes.",
+    image: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=400&q=80",
+    badge: "Value Pick" },
+  { id: 5, name: "Sony Xperia 1 VI", category: "phones", price: 1099, rating: 4.5, reviews: 654,
+    description: "Cinema-grade color science in a phone. Perfect for creators who demand pro-level video.",
+    image: "https://images.unsplash.com/photo-1570891836654-d4909d51b7a9?w=400&q=80" },
+
+  // Laptops
+  { id: 6, name: "MacBook Pro 16\" M4", category: "laptops", price: 2499, rating: 4.9, reviews: 3201,
+    description: "The M4 Pro chip. Up to 24 CPU cores. 48GB unified memory. An absolute powerhouse wrapped in precision aluminum.",
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80",
+    badge: "Editor's Choice" },
+  { id: 7, name: "Dell XPS 15", category: "laptops", price: 1899, rating: 4.7, reviews: 1654,
+    description: "An OLED display so vivid you'll question reality. Thunderbolt 5 connectivity meets an 11th-gen Intel i9.",
+    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80",
+    badge: "New" },
+  { id: 8, name: "ASUS ROG Zephyrus G16", category: "laptops", price: 1699, rating: 4.8, reviews: 2109,
+    description: "RTX 4080 in a 1.85kg frame. The thinnest gaming powerhouse ever engineered.",
+    image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400&q=80",
+    badge: "Gaming" },
+  { id: 9, name: "Lenovo ThinkPad X1 Carbon", category: "laptops", price: 1549, rating: 4.6, reviews: 891,
+    description: "Business-class durability meets ultrabook elegance. MIL-STD certified, under 1.12kg.",
+    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" },
+  { id: 10, name: "Microsoft Surface Laptop 6", category: "laptops", price: 1299, rating: 4.5, reviews: 743,
+    description: "The perfect Windows experience. PixelSense touchscreen, Snapdragon X Elite, all-day battery.",
+    image: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&q=80" },
+
+  // Monitors
+  { id: 11, name: "LG UltraGear 27\" 4K OLED", category: "monitors", price: 799, rating: 4.9, reviews: 1876,
+    description: "0.03ms response time. 240Hz. OLED blacks so deep they're invisible. Gaming transcended.",
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&q=80",
+    badge: "Top Rated" },
+  { id: 12, name: "Samsung Odyssey G9 49\"", category: "monitors", price: 1199, rating: 4.7, reviews: 1203,
+    description: "A 1000R curved ultra-wide that wraps around your vision. Dual QHD, 240Hz, Neo QLED.",
+    image: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=400&q=80",
+    badge: "Ultrawide" },
+  { id: 13, name: "Apple Studio Display", category: "monitors", price: 1599, rating: 4.8, reviews: 2341,
+    description: "5K Retina. 218 pixels per inch. True Tone. 600 nits. Designed for creators who demand perfection.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&q=80" },
+  { id: 14, name: "Dell U2723QX 27\" 4K", category: "monitors", price: 649, rating: 4.6, reviews: 987,
+    description: "USB-C hub, IPS Black panel, 98% DCI-P3. The ultimate productivity display.",
+    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&q=80" },
+  { id: 15, name: "ASUS ProArt 32\" 4K", category: "monitors", price: 899, rating: 4.7, reviews: 654,
+    description: "Delta E < 2 factory calibration. Hardware calibration support. A creator's true companion.",
+    image: "https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=400&q=80",
+    badge: "Creator Pick" },
+];
+
+export const categories = [
+  { id: 'all', label: 'All Products', icon: '✦' },
+  { id: 'phones', label: 'Phones', icon: '📱' },
+  { id: 'laptops', label: 'Laptops', icon: '💻' },
+  { id: 'monitors', label: 'Monitors', icon: '🖥️' },
+];
+
+export const carouselSlides = [
+  {
+    title: "The Future Is Now",
+    subtitle: "Samsung Galaxy S25 Ultra",
+    desc: "200MP camera. Titanium frame. Boundless intelligence.",
+    cta: "Shop Phones",
+    category: "phones",
+    gradient: "from-slate-900 via-blue-950 to-charcoal",
+    accent: "#60A5FA",
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=800&q=80"
+  },
+  {
+    title: "Power Redefined",
+    subtitle: "MacBook Pro M4",
+    desc: "48GB unified memory. The chip that changed everything, again.",
+    cta: "Shop Laptops",
+    category: "laptops",
+    gradient: "from-zinc-900 via-stone-900 to-charcoal",
+    accent: "#C9A84C",
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80"
+  },
+  {
+    title: "See Every Detail",
+    subtitle: "LG UltraGear OLED",
+    desc: "0.03ms. 240Hz. OLED perfection on your desk.",
+    cta: "Shop Monitors",
+    category: "monitors",
+    gradient: "from-emerald-950 via-slate-900 to-charcoal",
+    accent: "#34D399",
+    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+  },
+];

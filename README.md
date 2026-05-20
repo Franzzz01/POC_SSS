@@ -1,17 +1,13 @@
-# POC_SSS
+# Unzip, then:
 
-🚀 Setup Guide
-
-1. Extract the Project
-Unzip the project files.
-
----
-
-🖥️ Run the Application
-
-Terminal 1 — Backend (Spring Boot)
-
-```bash
+Terminal 1 — Backend
 cd shopwave/backend
 mvn package -DskipTests
-java -jar target/shopwave-backend-1.0.0.jara
+java -jar target/shopwave-backend-1.0.0.jar
+→ http://localhost:8080
+
+Terminal 2 — Frontend
+cd shopwave/frontend
+npm install
+npm start
+→ http://localhost:3000

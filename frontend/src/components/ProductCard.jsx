@@ -21,10 +21,10 @@ export default function ProductCard({ product, delay = 0 }) {
 
   return (
     <div
-      className="product-card bg-white rounded-3xl overflow-hidden border border-surface group cursor-pointer animate-slide-up"
+      className="product-card bg-white rounded-3xl overflow-hidden border border-surface group cursor-pointer animate-slide-up h-full"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'both', opacity: 0 }}
     >
-      <Link to={`/product/${product.id}`}>
+      <Link to={`/product/${product.id}`} className="block h-full">
         {/* Image */}
         <div className="relative overflow-hidden bg-surface h-52">
           <img
@@ -44,33 +44,37 @@ export default function ProductCard({ product, delay = 0 }) {
         </div>
 
         {/* Content */}
-        <div className="p-5">
-          <p className="text-xs text-muted font-medium uppercase tracking-wider mb-1 capitalize">{product.category}</p>
-          <h3 className="font-semibold text-charcoal text-sm leading-tight line-clamp-2 mb-2">{product.name}</h3>
-          <p className="text-xs text-muted leading-relaxed line-clamp-2 mb-3">{product.description}</p>
-
-          {/* Rating */}
-          <div className="flex items-center gap-1.5 mb-4">
-            <div className="flex items-center">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={11} fill={i < Math.floor(product.rating) ? '#C9A84C' : 'none'}
-                  className={i < Math.floor(product.rating) ? 'text-accent' : 'text-surface'} />
-              ))}
-            </div>
-            <span className="text-xs text-muted">{product.rating} ({product.reviews.toLocaleString()})</span>
+        <div className="p-5 flex flex-col justify-between ">
+          <div>
+            <p className="text-xs text-muted font-medium uppercase tracking-wider mb-1">{product.category}</p>
+            <h3 className="font-semibold text-charcoal text-sm leading-tight line-clamp-2 mb-2">{product.name}</h3>
+            <p className="text-xs text-muted leading-relaxed line-clamp-2 mb-3">{product.description}</p>
           </div>
 
-          {/* Price + Add */}
-          <div className="flex items-center justify-between">
-            <span className="font-display font-bold text-xl text-charcoal">${product.price.toLocaleString()}</span>
-            <button
-              onClick={handleAdd}
-              className="flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold btn-shimmer transition-all duration-300 active:scale-95"
-              style={{ background: '#1C1C1E', color: '#FAF8F5' }}
-            >
-              <ShoppingBag size={13} />
-              Add
-            </button>
+          <div>
+            {/* Rating */}
+            <div className="flex items-center gap-1.5 mb-4">
+              <div className="flex items-center">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={11} fill={i < Math.floor(product.rating) ? '#C9A84C' : 'none'}
+                    className={i < Math.floor(product.rating) ? 'text-accent' : 'text-surface'} />
+                ))}
+              </div>
+              <span className="text-xs text-muted">{product.rating} ({product.reviews.toLocaleString()})</span>
+            </div>
+
+            {/* Price + Add */}
+            <div className="flex items-center justify-between">
+              <span className="font-display font-bold text-xl text-charcoal">${product.price.toLocaleString()}</span>
+              <button
+                onClick={handleAdd}
+                className="flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold btn-shimmer transition-all duration-300 active:scale-95"
+                style={{ background: '#1C1C1E', color: '#FAF8F5' }}
+              >
+                <ShoppingBag size={13} />
+                Add
+              </button>
+            </div>
           </div>
         </div>
       </Link>

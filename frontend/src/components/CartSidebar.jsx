@@ -25,7 +25,7 @@ export default function CartSidebar() {
       )}
 
       {/* Sidebar */}
-      <div className={`fixed right-0 top-0 h-full w-full sm:w-[420px] bg-cream z-50 cart-sidebar flex flex-col shadow-2xl ${
+      <div className={`fixed right-0 top-0 h-full w-full sm:w-[420px] bg-white z-50 cart-sidebar flex flex-col shadow-2xl   ${
         cartOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         {/* Header */}

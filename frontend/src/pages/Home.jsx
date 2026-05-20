@@ -158,10 +158,9 @@ export default function Home() {
               img: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600&q=80',
               color: '#1A1A2E'
             },
-          ].map((cat, i) => (
+          ].map((cat) => (
             <Link to={`/shop?cat=${cat.id}`} key={cat.id}
-              className={`relative overflow-hidden rounded-3xl group cursor-pointer ${i === 0 ? 'sm:row-span-1' : ''}`}
-              style={{ height: i === 0 ? '280px' : '180px' }}>
+              className="relative overflow-hidden rounded-3xl group cursor-pointer h-56 sm:h-64">
               <img src={cat.img} alt={cat.label}
                 className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
